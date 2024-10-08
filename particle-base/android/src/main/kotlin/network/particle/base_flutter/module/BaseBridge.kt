@@ -57,11 +57,12 @@ object BaseBridge {
 
     fun setChainInfo(chainParams: String, result: MethodChannel.Result) {
         LogUtils.d("setChainName", chainParams)
-        LogUtils.d("setChainName", chainParams)
         val chainData: ChainData = GsonUtils.fromJson(
             chainParams, ChainData::class.java
         )
         try {
+            LogUtils.d("setChainName", chainData.toString())
+
             val chainInfo = ChainUtils.getChainInfo(chainData.chainId)
             ParticleNetwork.setChainInfo(chainInfo)
             result.success(true)

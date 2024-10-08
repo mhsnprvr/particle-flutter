@@ -47,9 +47,9 @@ android {
         consumerProguardFiles("consumer-rules.pro")
     }
 }
-
 dependencies {
     def sdkVersion = "2.1.10"
+
     implementation("network.particle:base-service:$sdkVersion")
     implementation("com.github.xxhong:CollectsPkg:2.1.0")
     implementation("commons-codec:commons-codec:1.15")
